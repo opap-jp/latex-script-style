@@ -2,5 +2,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage{script}
 
+%デフォルトの文字数は4文字
+\newcount\NameNum
+\NameNum=4
+
+\newcommand{\soundeffect}[1]{\hspace{\NameNum em} (SE) #1}
+
+%名前の長さ
+\NameNum=4
+
 \begin{document}
+\soundeffect{hoge}
+%\dialogue[hobe]{foo}
 \end{document}
