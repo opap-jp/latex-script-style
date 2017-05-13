@@ -1,0 +1,9 @@
+
+\newcount\NameNum
+\NameNum=4
+
+\newcommand{\soundeffect}[1]{\hspace{\NameNum em} (SE) #1}
+
+\newcommand{\BracketsRot}[1]{\raise0.5em\hbox{\rotatebox{-90}{#1}}}
+
+\newcommand{\dialogue}[2][name]{\makebox[\NameNum em]{#1} \BracketsRot{「} #2 \BracketsRot{」}}

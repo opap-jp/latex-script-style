@@ -1,0 +1,41 @@
+\documentclass[b5j]{tbook}
+
+\usepackage{framed,color}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{graphics}
+\usepackage{script}
+
+
+%名前の長さ
+\NameNum=4
+\setlength{\fboxrule}{0.5pt}
+
+\begin{document}
+`
+\begin{oframed}
+		\rotatebox{90}{CUT}
+		\rule[-0.5zh]{0.5mm}{3em}
+		\hspace{5em}
+		\raise1em\hbox{画\hspace{1em}面}
+		\hspace{5em}
+		\rule[-0.5zh]{0.5mm}{3em}
+		\hspace{1em}
+		\rule[-0.5zh]{0.5mm}{3em}
+		\hspace{14em}
+		\raise1em\hbox{音\hspace{1em}声}`
+		\hspace{14em}
+\end{oframed}
+
+
+%\framebox[3cm][l]{
+	
+%Cut & \rotatebox{90}{画面} & \rotatebox{90}{音声} \\ 
+%Cut & \rotatebox{90}{画面} & \rotatebox{90}{音声} \\ 
+%Cut & \rotatebox{90}{画面} & \rotatebox{90}{音声} \\ 
+
+%\rotatebox{90}{Cut} & 画面 & 音声 \\ 
+
+\soundeffect{hoge}
+%\dialogue[hobe]{foo}
+\end{document}
