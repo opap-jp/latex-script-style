@@ -8,10 +8,18 @@
 
 \newcommand{\dialogue}   [2][name]{\makebox[\NameNum em]{#1} \BracketsRot{「} #2 \BracketsRot{」}}
 
-\newcommand{\name}[1]{}
-\newenvironment{script}{}{}
-\newenvironment{cut}   {}{}
+\newenvironment{script} {\begin{longtable}{|l|l|l|} \hline
+							Cut & 画面& 音声 \\ \hline
+							\endfirsthead
+							Cut & 画面& 音声 \\ \hline
+							\endhead
+							\hline}
+						{\end{longtable}}
+\newcommand{\name}[1]{#1}
+
+\newcommand{\cut}[3]{#1 & #2 & #3 \\ \hline}
 \newenvironment{video} {}{}
 \newenvironment{audio} {}{}
+
 
 
