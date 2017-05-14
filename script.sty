@@ -2,11 +2,11 @@
 \newcount\NameNum
 \NameNum=4
 
-\newcommand{\soundeffect}[1]{\hspace{\NameNum em} (SE) #1 }
+\newcommand{\soundeffect}[1]{\item[] \hspace{\NameNum em} (SE) #1 }
 
 \newcommand{\BracketsRot}[2]{\raise0.5em\hbox{\rotatebox{#1}{#2}}}
 
-\newcommand{\dialogue}   [2][name]{\makebox[\NameNum em]{#1} \BracketsRot{-90}{「} #2 
+\newcommand{\dialogue}   [2][name]{\item[] \makebox[\NameNum em]{#1} \BracketsRot{-90}{「} #2 
                                    \BracketsRot{90}{」}  }
 
 	  \newenvironment{script}
