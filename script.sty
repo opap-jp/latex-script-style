@@ -2,24 +2,26 @@
 \newcount\NameNum
 \NameNum=4
 
-\newcommand{\soundeffect}[1]{\hspace{\NameNum em} (SE) #1}
+\newcommand{\soundeffect}[1]{\hspace{\NameNum em} (SE) #1 }
 
-\newcommand{\BracketsRot}[1]{\raise0.5em\hbox{\rotatebox{-90}{#1}}}
+\newcommand{\BracketsRot}[2]{\raise0.5em\hbox{\rotatebox{#1}{#2}}}
 
-\newcommand{\dialogue}   [2][name]{\makebox[\NameNum em]{#1} \BracketsRot{「} #2 \BracketsRot{」}}
+\newcommand{\dialogue}   [2][name]{\makebox[\NameNum em]{#1} \BracketsRot{-90}{「} #2 
+                                   \BracketsRot{90}{」}  }
 
-\newenvironment{script} {\begin{longtable}{|l|l|l|} \hline
-							Cut & 画面& 音声 \\ \hline
-							\endfirsthead
-							Cut & 画面& 音声 \\ \hline
-							\endhead
-							\hline}
-						{\end{longtable}}
-\newcommand{\name}[1]{#1}
+	  \newenvironment{script}
+	  	{\begin{longtable}{|l |p{20em}||p{20em}|} \hline
+		\BracketsRot{90}{Cut} & 画面 & 音声 \\ \hline
+                            \endfirsthead
+                            \rotatebox{90}{Cut} & 画面& 音声 \\ \hline
+                            \endhead
+                            \hline}
+                        {\end{longtable}}
+
+\newcommand{\name}[1]{\rotatebox{90}{#1}}
 
 \newcommand{\cut}[3]{#1 & #2 & #3 \\ \hline}
-\newenvironment{video} {}{}
-\newenvironment{audio} {}{}
-
-
+\newenvironment{video}  {}{}
+\newenvironment{audio}{\begin{itemize}}
+{\end{itemize}}
 
