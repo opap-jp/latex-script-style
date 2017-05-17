@@ -25,10 +25,16 @@
 			  \endhead}
        {\end{longtable}}
 
-\newcommand{\name}[1]{\raisebox{-0.3em}[0em][0em]{\rotatebox{90}{#1}}}
+%\newcommand{\name}[1]{\raisebox{-0.3em}[0em][0em]{\rotatebox{90}{#1}}}
+	   \newcommand{\name}[2]{\raisebox{-1.5 em}[0em][0em]{\rotatebox{90}{#1}}}
 
-\newcommand{\cut}[1]{\name{#1} &}
-\newcommand{\video}[1]{#1 & & }% \begin{verb}#1\end{verb} & &}
-\newcommand{\audio}[1]{#1 \\ \hline}
+	   \newcommand{\cut}[1]{\\ \name{#1}{\wordcount{#1}} &}
+\newcommand{\video}[1]{\raisebox{1em}[7.5pt][0pt]{} #1 & & }
+\newcommand{\audio}[1]{#1  \\ \hline}
 
-%\newcommand{\cut}[3]{#1 & \raisebox{1em}[7.5pt][0pt]{} #2  & & #3 \\ \hline}
+
+\def\wordcount#1{%
+	\@tempcnta\z@%
+	\@tfor \@tmp:=#1\do{\advance\@tempcnta\@ne}%
+	\the\@tempcnta%
+}
