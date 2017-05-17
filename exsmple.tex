@@ -4,8 +4,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{longtable}
 \usepackage{graphics}
+\usepackage{makecell}
 \usepackage{script}
-
 
 %名前の長さ
 \NameNum=4
@@ -13,16 +13,23 @@
 \begin{document}
 
 \begin{script}
-	\cut{\name{$1$}}
-	{ああああああああああああああ} 
-	{\begin{audio}
-		\item[] \soundeffect{hoge}
-		\item[] \dialogue[hobe]{foo}
-	\end{audio}}
+	\cut{11}
+	\video{ああああ  \par ああああ }
+	\audio{
+	\soundeffect{ああああ}
+		\dialogue[]{}
+	}
+	\cut{11}
+	\video{ああああ  \par ああああ}
+	\audio{
+	\soundeffect{ああああ}
+		\dialogue[ああああ]{ああああ}
+	}
 
-	
-	\cut{\name{2}} {3} {4}
-\end{script}
+
+
+	\end{script}
+
 
 
 

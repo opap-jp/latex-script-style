@@ -6,29 +6,29 @@
 \ImageSize=20
 \AudioSize=30
 
-\newcommand{\soundeffect}[1]{ \hspace{\NameNum em} (SE) #1 \par} 
-\newcommand{\BracketsRot}[2]{\raise0.5em\hbox{\rotatebox{#1}{#2}} }
+\newcommand{\soundeffect}[1]{ \hspace{\NameNum em} (SE) #1 \par}
+\newcommand{\BracketsRot}[2]{\raise0.5em\hbox{\rotatebox{#1}{#2}}}
 
 \newcommand{\dialogue}   [2][name]{ \makebox[\NameNum em]{#1} \BracketsRot{-90}{「} #2 
                                    \BracketsRot{-90}{」} \par}
 
 \newenvironment{script}
-	  {\begin{longtable}{|c |p{\ImageSize em}|p{1em}|p{\AudioSize em}|}
-			  \hline
-			  \BracketsRot{90}{CUT } & 
-				  \hspace{6.5em} \raisebox{1.5em}[0em][0em]{画  面}
-				  & & \hspace{13.5em} \raisebox{1.5em}[0em][0em]{音 声} \\ \hline
-              \endfirsthead
-				  \rotatebox{90}{Cut} & 
-			  	  \hspace{6.5em} \raisebox{1.5em}[0em][0em]{画  面}
-				  & &\hspace{13.5em} \raisebox{1.5em}[0em][0em]{音 声} \\ \hline
+	  {\begin{longtable}{|c |p{\ImageSize em}|p{1em}|p{\AudioSize em}|}%
+			  \hline%
+			  \BracketsRot{90}{CUT } &%
+				  \hspace{6.5em} \raisebox{1.5em}[0em][0em]{画  面}%
+				  & & \hspace{13.5em} \raisebox{1.5em}[0em][0em]{音 声} \\ \hline%
+              \endfirsthead%
+				  \rotatebox{90}{Cut} &%
+			  	  \hspace{6.5em} \raisebox{1.5em}[0em][0em]{画  面}%
+				  & &\hspace{13.5em} \raisebox{1.5em}[0em][0em]{音 声} \\ \hline%
 			  \endhead}
        {\end{longtable}}
 
-	   \newcommand{\name}[1]{\raisebox{-0.3em}[0em][0em]{\rotatebox{90}{#1}}}
+\newcommand{\name}[1]{\raisebox{-0.3em}[0em][0em]{\rotatebox{90}{#1}}}
 
-	   \newcommand{\cut}[3]{ #1 & \raisebox{1em}[7.5pt][0pt]{} #2  & & #3 \\ \hline}
-\newenvironment{video}{}{  }
-\newenvironment{audio} {}{}
+\newcommand{\cut}[1]{\name{#1} &}
+\newcommand{\video}[1]{#1 & & }% \begin{verb}#1\end{verb} & &}
+\newcommand{\audio}[1]{#1 \\ \hline}
 
-\newenvironment{cut2}[1]{\name{#1}} {\\}
+%\newcommand{\cut}[3]{#1 & \raisebox{1em}[7.5pt][0pt]{} #2  & & #3 \\ \hline}
