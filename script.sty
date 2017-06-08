@@ -9,8 +9,8 @@
 \newcommand{\soundeffect}[1]{ \hspace{\NameNum em} (SE) #1 \par}
 \newcommand{\BracketsRot}[2]{\raise0.5em\hbox{\rotatebox{#1}{#2}}}
 
-\newcommand{\dialogue}   [2][name]{ \makebox[\NameNum em]{#1} \BracketsRot{-90}{「} #2 
-                                   \BracketsRot{-90}{」} \par}
+\newcommand{\dialogue}   [2][name]{\makebox[\NameNum em]{#1} 「 #2 
+                                   」 \par}
 
 \newenvironment{script}
 	  {\begin{longtable}{|c |p{\ImageSize em}|p{1em}|p{\AudioSize em}|}%
