@@ -1,41 +1,81 @@
 \documentclass[b5j]{tbook}
 
-\usepackage{framed,color}
 \usepackage[utf8]{inputenc}
 \usepackage{longtable}
-\usepackage{graphics}
+\usepackage{graphicx}
+%\usepackage{makecell}
 \usepackage{script}
 
-
+%縦の余白設定
+\setlength{\topmargin}{-20mm}
+%横の余白設定
+\setlength{\oddsidemargin}{-10.4mm}  % 左の余白を20mm(=1inch-5.4mm)に
+%\addtolength{\textwidth}{10mm }
 %名前の長さ
 \NameNum=4
-\setlength{\fboxrule}{0.5pt}
 
+\renewcommand{\arraystretch}{10.2}
 \begin{document}
-`
-\begin{oframed}
-		\rotatebox{90}{CUT}
-		\rule[-0.5zh]{0.5mm}{3em}
-		\hspace{5em}
-		\raise1em\hbox{画\hspace{1em}面}
-		\hspace{5em}
-		\rule[-0.5zh]{0.5mm}{3em}
-		\hspace{1em}
-		\rule[-0.5zh]{0.5mm}{3em}
-		\hspace{14em}
-		\raise1em\hbox{音\hspace{1em}声}`
-		\hspace{14em}
-\end{oframed}
+
+\begin{script}
+	\cut{1}
+	\video{あああああ \par あああああああああああああああああ
+	aaあああ
+\par
+	あさああ
+	}
+	\audio{
+		\soundeffect{あああああああああああああああああ}
+		\dialogue[あああああ]{あああああああああああああああ}
+	}
+	\cut{2}
+	\video{あああああああ }
+	\audio{
+		\soundeffect{ああああ}
+		\dialogue[いいい]{}
+	}
+
+	\cut{3}
+	\video{ああああ あああ }
+	\audio{
+		\soundeffect{ああああ}
+		\dialogue[いい]{}
+	}
+
+	\cut{4}
+	\video{あああああああ }
+	\audio{
+		\soundeffect{ああああ}
+		\dialogue[あああ]{}
+	}
+	\cut{5}
+	\video{あああああああ }
+	\audio{
+		\soundeffect{ああああ}
+		\dialogue[あああ]{}
+	}
+	\cut{10}
+	\video{ああああ \par あa \par aa \par  aa \par あああ }
+	\audio{
+		\soundeffect{ああああ}
+		\dialogue[あああ]{}
+	}
+
+	\cut{11}
+	\video{ああああ あああ }
+	\audio{
+		\soundeffect{ああああ}
+		\dialogue[あああ]{}
+	}
 
 
-%\framebox[3cm][l]{
-	
-%Cut & \rotatebox{90}{画面} & \rotatebox{90}{音声} \\ 
-%Cut & \rotatebox{90}{画面} & \rotatebox{90}{音声} \\ 
-%Cut & \rotatebox{90}{画面} & \rotatebox{90}{音声} \\ 
 
-%\rotatebox{90}{Cut} & 画面 & 音声 \\ 
 
-\soundeffect{hoge}
-%\dialogue[hobe]{foo}
+	\end{script}
+
+
+
+
+
+
 \end{document}
