@@ -6,7 +6,7 @@
 \newcount\spaceSize
 \NameNum=4
 \ImageSize=20
-\spaceSize=0
+\spaceSize=1
 \AudioSize=40
 
 \newcount\hurfTmp
@@ -59,22 +59,15 @@
 			  \BracketsRot{90}{CUT } &%
 				  \hspace{\ImageHurfSize em} \raisebox{1.5em}[0em][0em]{画　面}%
 				  & & \hspace{\AudioHurfSize em} \raisebox{1.5em}[0em][0em]{音　声} \\ 
-				  \hline%
-              \endfirsthead%
-			  \hline%
-			  \BracketsRot{90}{CUT } &%
-			  	  \hspace{\ImageHurfSize em} \raisebox{1.5em}[0em][0em]{画　面}%
-				  & &\hspace{\AudioHurfSize em} \raisebox{1.5em}[0em][0em]{音　声} \\ 
-				  \hline%
-			  \endhead}
-       {\end{longtable}}
+}
+       {\hline \end{longtable}}
 
 \newcommand{\name}[1]{\rotatebox[origin=r]{90}{#1}}
 
-\newcommand{\cut}[1]{\\   \name{#1} &}
+\newcommand{\cut}[1]{\\  \hline  \name{#1} &}
 
 \newcommand{\video}[1]{\rule{0cm}{0.4cm} #1 \par  & & }
-\newcommand{\audio}[1]{#1 \par \\ \hline}
+\newcommand{\audio}[1]{#1 \par \\ }
 
 \def\wordcount#1{%
 	\@tempcnta\z@%
