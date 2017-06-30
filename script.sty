@@ -1,0 +1,76 @@
+\newcount\NameNum
+\newcount\ImageSize
+\newcount\AudioSize
+\newcount\ImageHurfSize
+\newcount\AudioHurfSize
+\newcount\spaceSize
+\NameNum=4
+\ImageSize=20
+\spaceSize=1
+\AudioSize=40
+
+\newcount\hurfTmp
+
+%音声の中央を計算
+\hurfTmp=0
+\AudioHurfSize=\AudioSize
+\divide\ImageHurfSize by 2 
+\advance\hurfTmp by \AudioHurfSize 
+\multiply\hurfTmp by 2 
+\AudioHurfSize=\AudioSize \relax
+\advance\AudioHurfSize by -\hurfTmp
+\if\ImageHurfSize > 0 
+	\AmageHurfSize=-1
+\else 
+	\AudioHurfSize=0
+\fi 
+\advance\AudioHurfSize by -3
+\hurfTmp=\AudioSize
+\divide\hurfTmp by 2 
+\advance\AudioHurfSize by \hurfTmp
+
+%画面の中央を計算
+\hurfTmp=0
+\ImageHurfSize=\ImageSize
+\divide\ImageHurfSize by 2 
+\advance\hurfTmp by \ImageHurfSize 
+\multiply\hurfTmp by 2 
+\ImageHurfSize=\ImageSize \relax
+\advance\ImageHurfSize by -\hurfTmp
+\if\ImageHurfSize > 0 
+	\ImageHurfSize=-1
+\else 
+  \ImageHurfSize=0
+\fi 
+\advance\ImageHurfSize by -3
+\hurfTmp=\ImageSize
+\divide\hurfTmp by 2 
+\advance\ImageHurfSize by \hurfTmp
+
+\newcommand{\soundeffect}[1]{ \hspace{\NameNum em} (SE) #1 \par}
+\newcommand{\BracketsRot}[2]{\raise0.5em\hbox{\rotatebox{#1}{#2}}}
+
+\newcommand{\dialogue}   [2][name]{\makebox[\NameNum em]{#1} 「 #2 
+                                   」 \par}
+
+\newenvironment{script}
+	  {\begin{longtable}{|c |p{\ImageSize em}|p{\spaceSize em}|p{\AudioSize em}|}%
+			  \hline%
+			  \BracketsRot{90}{CUT } &%
+				  \hspace{\ImageHurfSize em} \raisebox{1.5em}[0em][0em]{画　面}%
+				  & & \hspace{\AudioHurfSize em} \raisebox{1.5em}[0em][0em]{音　声} \\ 
+}
+       {\hline \end{longtable}}
+
+\newcommand{\name}[1]{\rotatebox[origin=r]{90}{#1}}
+
+\newcommand{\cut}[1]{\\  \hline  \name{#1} &}
+
+\newcommand{\video}[1]{\rule{0cm}{0.4cm} #1 \par  & & }
+\newcommand{\audio}[1]{#1 \par \\ }
+
+\def\wordcount#1{%
+	\@tempcnta\z@%
+	\@tfor \@tmp:=#1\do{\advance\@tempcnta\@ne}%
+	\the\@tempcnta%
+}
